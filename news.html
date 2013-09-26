@@ -1,12 +1,19 @@
 ---
-layout: post
+layout: layout
+title: News
 ---
 
-  {% for post in site.posts limit: 5 %}
-<ul>
+{% for post in site.posts limit: 5 %}
+
+<div class="span4 textbox">
+  <ul>
     <li> <div class="content" style="font-size:18pt;"> {{ post.title }} <div class="pull-right" style="font-size:12pt;"> {{ post.date | date: "%d" | plus:'0' }} {{ post.date | date: "%B %Y" }}</div></div>
-    <br> {{ post.content }}
-    <hr></li>
-</ul>
-  {% endfor %}
+      <br> {{ post.content }}
+      <hr></li>
+  </ul>
+</div>
+
+{% endfor %}
+
+
 
