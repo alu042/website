@@ -7,12 +7,12 @@ title: News
 
 <div class="textbox">
   <div class="container">
-  <div class="content" style="font-size:18pt;"> {{ post.title }} 
+  <div class="content" style="font-size:18pt;"> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> 
     <div class="pull-right" style="font-size:12pt;"> {{ post.date | date: "%d" | plus:'0' }} {{ post.date | date: "%B %Y" }}
     </div>
   </div>
-  <div style="float: right"><img src="{{ post.image }}"/></div>
-  <br>{{ post.content }} 
+  <div style="float: right" style="font-size: 12pt;"><img src="{{ post.image }}"/></div>
+  <br>{{ post.summary }} 
   </div>
 </div>
 
